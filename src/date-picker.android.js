@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ColorPropType, StyleSheet, View } from 'react-native';
+import { ColorPropType, StyleSheet, View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Picker from './picker';
@@ -31,7 +31,7 @@ export default class DatePicker extends PureComponent {
     minimumDate: PropTypes.instanceOf(Date),
     mode: PropTypes.oneOf(['date', 'time', 'datetime']),
     onDateChange: PropTypes.func.isRequired,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     textColor: ColorPropType,
     textSize: PropTypes.number,
     itemSpace: PropTypes.number,
